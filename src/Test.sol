@@ -19,7 +19,7 @@ contract SuaveEnabled is Test {
     ConfidentialStoreI constant confStoreWrapper = ConfidentialStoreI(Registry.confidentialStoreAddr);
     ContextConnector constant ctx = ContextConnector(Suave.CONTEXT_GET);
 
-    function setUp() public {
+    function setUp() virtual public {
         string[] memory inputs = new string[](2);
         inputs[0] = "suave-geth";
         inputs[1] = "version";
